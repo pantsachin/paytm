@@ -15,7 +15,9 @@ const signupBody = zod.object({
 })
 
 router.post("/signup", async(req, res) => {
+
     const {success} = signupBody.safeParse(req.body)
+
     if (!success) {
         return res.status(411).json({
             message: "Email already taken / Incorrect inputs"
@@ -40,6 +42,11 @@ router.post("/signup", async(req, res) => {
     })
 
     const userId = user._id;
+
+    await Account.create({
+        userId,
+        balance: 1 + Math.random()*10000 
+    })
     
     const token = jwt.sign({
         userId
