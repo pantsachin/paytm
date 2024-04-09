@@ -15,4 +15,4 @@ const jwt = require('jsonwebtoken');
 
 app.use('/api/v1', mainRouter)
 
-app.listen(3000);
+app.listen(3001);
