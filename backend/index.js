@@ -2,12 +2,14 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require('body-parser');
 
+const app = express();
+
 app.use(cors());
 app.use(bodyParser.json())
 
 const mainRouter = require("./routes/index");
 
-const app = express();
+
 const jwt = require('jsonwebtoken');
 
 
