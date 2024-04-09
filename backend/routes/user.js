@@ -53,7 +53,7 @@ router.post("/signup", async(req, res) => {
 
     }, JWT_SECRET)
 
-    res.json(P{
+    res.json({
         message: "User created successfully", 
         token: token
     })
