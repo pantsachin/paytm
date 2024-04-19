@@ -4,6 +4,8 @@ import { Signup } from "./pages/Signup"
 import { Signin } from './pages/Signin';
 import { AppBar } from './components/Appbar';
 import { Balance } from './components/Balance';
+import { Users } from './components/Users';
+import { User } from './components/Users';
 
 
 function App() {
@@ -23,7 +25,7 @@ function App() {
 
         </BrowserRouter> */}
 
-        <Balance/>
+        <Users/>
 
 
     </div>
